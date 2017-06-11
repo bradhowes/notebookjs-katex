@@ -21,8 +21,6 @@
     "katex": "^0.7.1"
   },
   "devDependencies": {
-    "jsonpath": "^0.2.11",
-    "katex": "^0.7.1",
     "vows": "^0.8.1"
   },
   "repository": {
