@@ -58,3 +58,5 @@ There are a set of [Vows](http://vowsjs.org) in [index.test.js](index.test.js). 
 ```bash
 % npm test
 ```
+
+> **NOTE**: if this fails, there may be a path issue with `vows` executable. See [package.json](package.json).
