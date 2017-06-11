@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bradhowes/notebookjs-katex.svg?branch=master)](https://travis-ci.org/bradhowes/notebookjs-katex)
+
 # Overview
 
 [IPython](http://ipython.readthedocs.io/en/stable/index.html)
