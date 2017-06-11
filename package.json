@@ -1,0 +1,36 @@
+{
+  "name": "notebookjs-katex",
+  "version": "1.0.0",
+  "description": "Process embedded math expressions in IPython Markdown cells.",
+  "main": "index.js",
+  "homepage": "https://github.com/bradhowes/notebookjs-katex",
+  "keywords": [
+    "ipython",
+    "jupyter",
+    "notebookjs",
+    "katex"
+  ],
+  "author": {
+    "name": "Brad Howes",
+    "email": "bradhowes@mac.com",
+    "url": "http://keystrokecountdown.com"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "dependencies": {
+    "jsonpath": "^0.2.11",
+    "katex": "^0.7.1"
+  },
+  "devDependencies": {
+    "jsonpath": "^0.2.11",
+    "katex": "^0.7.1",
+    "vows": "^0.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bradhowes/notebookjs-katex.git"
+  },
+  "scripts": {
+    "test": "vows index.test.js"
+  }
+}
