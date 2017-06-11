@@ -15,7 +15,6 @@
     "email": "bradhowes@mac.com",
     "url": "http://keystrokecountdown.com"
   },
-  "contributors": [],
   "license": "MIT",
   "dependencies": {
     "jsonpath": "^0.2.11",
@@ -31,6 +30,6 @@
     "url": "git://github.com/bradhowes/notebookjs-katex.git"
   },
   "scripts": {
-    "test": "vows index.test.js"
+    "test": "node_modules/vows/bin/vows --spec index.test.js"
   }
 }
