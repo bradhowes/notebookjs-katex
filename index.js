@@ -14,6 +14,10 @@
 var jpath = require("jsonpath");
 var katex = require("katex");
 
+// Polyfill for missing `assign` method.
+//
+// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Polyfill
+//
 if (typeof Object.assign != 'function') {
     Object.assign = function(target, varArgs) { // .length of function is 2
         if (target == null) { // TypeError if undefined or null
@@ -61,7 +65,7 @@ KatexFilter.prototype = {
         var options = Object.assign({}, this.katexOptions);
         options.displayMode = displayMode;
         options.throwOnError = false;
-        return '' + katex.renderToString(source, options);
+        return katex.renderToString(source, options);
     },
 
     /**

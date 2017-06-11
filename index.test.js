@@ -36,7 +36,7 @@ vows.describe('KatexFilter').addBatch({
         }
     },
     'Check renderKatex': {
-        topic: '' + kf.renderKatex('1 + 2', false),
+        topic: kf.renderKatex('1 + 2', false),
         'Should start with <': function(topic) {
             assert.isTrue(topic.startsWith('<'));
         },
