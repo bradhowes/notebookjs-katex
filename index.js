@@ -61,7 +61,7 @@ KatexFilter.prototype = {
         var options = Object.assign({}, this.katexOptions);
         options.displayMode = displayMode;
         options.throwOnError = false;
-        return katex.renderToString(source, options);
+        return '' + katex.renderToString(source, options);
     },
 
     /**
