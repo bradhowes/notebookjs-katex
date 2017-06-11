@@ -11,8 +11,8 @@
  * notebook = notebookjs.parse(ipynb);
  */
 
-const jpath = require("jsonpath");
-const katex = require("katex");
+var jpath = require("jsonpath");
+var katex = require("katex");
 
 /**
  * Create new KatexFilter object.

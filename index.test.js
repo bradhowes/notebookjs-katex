@@ -1,14 +1,14 @@
 "use strict";
 
-const vows = require('vows');
-const assert = require('assert');
-const KatexFilter = require('./index.js');
+var vows = require('vows');
+var assert = require('assert');
+var KatexFilter = require('./index.js');
 var kf = new KatexFilter();
 
 vows.describe('KatexFilter').addBatch({
     'Check regexp matching within line': {
         topic: function() {
-            const replacer = function(match, p1, p2) { return p1 + 'blah'; };
+            var replacer = function(match, p1, p2) { return p1 + 'blah'; };
             return 'This is $a test$!'.replace(kf.inlinePattern, replacer);
         },
         'Expected transform': function(topic) {
@@ -17,7 +17,7 @@ vows.describe('KatexFilter').addBatch({
     },
     'Check regexp matching at start of line': {
         topic: function() {
-            const replacer = function(match, p1, p2) { return p1 + 'blah'; };
+            var replacer = function(match, p1, p2) { return p1 + 'blah'; };
             return '$This is$ a test!'.replace(kf.inlinePattern, replacer);
         },
         'Expected transform': function(topic) {
@@ -26,7 +26,7 @@ vows.describe('KatexFilter').addBatch({
     },
     'Check escaped pattern at start of line': {
         topic: function() {
-            const replacer = function(match, p1, p2) {
+            var replacer = function(match, p1, p2) {
                 return p1 + 'blah';
             };
             return '\\$This is$ a test!'.replace(kf.inlinePattern, replacer);
@@ -50,7 +50,7 @@ vows.describe('KatexFilter').addBatch({
 
     'Convert inline math': {
         topic: function() {
-            const text = 'What is $1 + 2$?';
+            var text = 'What is $1 + 2$?';
             var source = [text];
             kf.expandKatexInTextCellSource(source);
             source.push(text);
@@ -75,14 +75,14 @@ vows.describe('KatexFilter').addBatch({
 
             // This is brittle since it relies on what current Katex rendering style. Better ideas?
             //
-            const expected = 'What is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1 + 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathrm">2</span></span></span></span>?';
+            var expected = 'What is <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1 + 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">1</span><span class="mbin">+</span><span class="mord mathrm">2</span></span></span></span>?';
             assert.equal(topic[0], expected);
         }
     },
 
     'Ignore escaped $': {
         topic: function() {
-            const text = 'The donut costs \$1.50.';
+            var text = 'The donut costs \$1.50.';
             var source = [text];
             kf.expandKatexInTextCellSource(source);
             source.push(text);
@@ -95,7 +95,7 @@ vows.describe('KatexFilter').addBatch({
 
     'Ignore lack of terminating $': {
         topic: function() {
-            const text = 'The donut costs $1.50.';
+            var text = 'The donut costs $1.50.';
             var source = [text];
             kf.expandKatexInTextCellSource(source);
             source.push(text);
@@ -108,7 +108,7 @@ vows.describe('KatexFilter').addBatch({
 
     '$$ block splits lines': {
         topic: function() {
-            const text = 'The equation $$x + y$$ is very important.';
+            var text = 'The equation $$x + y$$ is very important.';
             var source = [text];
             kf.expandKatexInTextCellSource(source);
             source.push(text);
@@ -127,7 +127,7 @@ vows.describe('KatexFilter').addBatch({
     
     'Both $$ and $ spans handled properly': {
         topic: function() {
-            const text = 'The equation $$x + y$$ is only valid when $x$ and $y$ are defined.';
+            var text = 'The equation $$x + y$$ is only valid when $x$ and $y$ are defined.';
             var source = [text];
             kf.expandKatexInTextCellSource(source);
             source.push(text);
