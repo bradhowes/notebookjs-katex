@@ -15,7 +15,7 @@ expressions into math HTML renderings.
 
 This [NPM](https://www.npmjs.com) package provides a simple filter for `IPython` source which when run before
 `notebookjs`'s `render` process will properly generate inline and block math HTML expressions using the
-[Katex](https://github.com/Khan/KaTeX) package. I use this to perform server-side math expression rendering for
+[KaTeX](https://github.com/Khan/KaTeX) package. I use this to perform server-side math expression rendering for
 my blog, [Keystroke Countdown](https://keystrokecountdown.com).
 
 # To Use
@@ -42,7 +42,7 @@ var html = notebook.render().outerHTML;
 
 # Configuration
 
-The `KatexFilter` constructor takes an optional configuration object which will be given to the Katex `render`
+The `KatexFilter` constructor takes an optional configuration object which will be given to the KaTeX `render`
 method. See the [docs](https://github.com/Khan/KaTeX#rendering-options) for details. Note that `KatexFilter`
 always sets `throwOnError` to `false`, and `displayMode` will be set depending on the delimiters surrounding the
 math expression.
@@ -51,7 +51,7 @@ math expression.
 
 * [jsonpath](https://github.com/dchester/jsonpath) -- used to isolate the Markdown cells in an IPython notebook
   JSON file.
-* [katex](https://github.com/Khan/KaTeX) -- performs the rendering of the LaTeX commands.
+* [KaTeX](https://github.com/Khan/KaTeX) -- performs the rendering of the LaTeX commands.
 
 # Tests
 
