@@ -30,8 +30,8 @@ Assuming you already have `notebookjs` installed, one way for using this would l
 `notebookjs` to parse and render HTML:
 
 ```javascript
-const KatexFilter = require("notebookjs-katex");
-const kf = new KatexFilter();
+var KatexFilter = require("notebookjs-katex");
+var kf = new KatexFilter();
 
 var ipynb = JSON.parse(fs.readFileSync('/path/to/notebook.ipynb'));
 kf.expandKatexInNotebook(ipynb);
