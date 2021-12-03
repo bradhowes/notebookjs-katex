@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/bradhowes/notebookjs-katex.svg?branch=master)](https://travis-ci.org/bradhowes/notebookjs-katex)
+[![CI](https://github.com/bradhowes/notebookjs-katex/workflows/CI/badge.svg)](https://github.com/bradhowes/notebookjs-katex)
+[![License: MIT](https://img.shields.io/badge/License-MIT-A31F34.svg)](https://opensource.org/licenses/MIT)
 
 # Overview
 
