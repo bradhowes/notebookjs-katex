@@ -17,7 +17,10 @@ expressions into math HTML renderings.
 This [NPM](https://www.npmjs.com) package provides a simple filter for `IPython` source which when run before
 `notebookjs`'s `render` process will properly generate inline and block math HTML expressions using the
 [KaTeX](https://github.com/Khan/KaTeX) package. I use this to perform server-side math expression rendering for
-my blog, [Keystroke Countdown](https://keystrokecountdown.com).
+my blog, [Keystroke Countdown](https://keystrokecountdown.com). The post
+[Metalsmith Plugins for Server-side KaTeX Processing](https://keystrokecountdown.com/articles/metalsmith2/index.html)
+talks about the implementation of this package as well as a Remarkable plugin that does similar processing for Markdown
+text.
 
 # To Use
 
