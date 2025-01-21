@@ -18,7 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "jsonpath": "^1.1.1",
-    "katex": "0"
+    "katex": "0.16.21",
+    "notebookjs-katex": "^1.1.0"
   },
   "devDependencies": {
     "vows": "0"
